@@ -1,5 +1,8 @@
 # Git Definitions
 
+I forgot to put my name down: Derek Yi Yang
+Date: 17JUL2016
+
 **Instructions: ** Define each of the following Git concepts.
 
 * What is version control?  Why is it useful?
