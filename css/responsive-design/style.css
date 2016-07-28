@@ -1,3 +1,12 @@
+
+
+*{
+  outline: 1px solid red;
+}
+
+body{
+  width: 960px;
+}
 blockquote {
   border-left: 5px solid blue;
   padding: 15px;
@@ -9,9 +18,22 @@ cite {
   margin-top: 10px;
 }
 
+#external-links {
+  display: inline-block;
+  vertical-align: top;
+  width: 200px;
+
+}
+
 #external-links ul {
   list-style-type: none;
   padding-left: 0px;
+}
+
+main{
+  display: inline-block;
+  vertical-align: top;
+  width: 756px;
 }
 
 /* you're welcome to edit the
@@ -30,3 +52,5 @@ figcaption {
   font-style: italic;
   text-align: right;
 }
+
+
