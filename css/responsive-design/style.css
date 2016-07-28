@@ -5,8 +5,9 @@
 }
 
 body{
-  width: 960px;
+  max-width: 960px;
 }
+
 blockquote {
   border-left: 5px solid blue;
   padding: 15px;
@@ -21,7 +22,8 @@ cite {
 #external-links {
   display: inline-block;
   vertical-align: top;
-  width: 200px;
+  width: 20%;
+  min-width: 90px;
 
 }
 
@@ -33,7 +35,7 @@ cite {
 main{
   display: inline-block;
   vertical-align: top;
-  width: 756px;
+  width: 78%;
 }
 
 /* you're welcome to edit the
@@ -53,4 +55,22 @@ figcaption {
   text-align: right;
 }
 
+
+@media screen and (max-width: 500px) {
+  body{
+    background-color: hotpink;
+  }
+  h1{
+    font-size: 18px;
+  }
+  main{
+    display: block;
+    width: 100%;
+  }
+  #external-links{
+    display: block;
+    width: 100%;
+  }
+
+}
 
