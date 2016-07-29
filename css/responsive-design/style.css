@@ -1,11 +1,10 @@
-
-
-*{
+/**{
   outline: 1px solid red;
-}
+}*/
 
 body{
   max-width: 960px;
+  align-content: center;
 }
 
 blockquote {
