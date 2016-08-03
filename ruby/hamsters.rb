@@ -11,16 +11,16 @@ puts("Good for adoption? (y/n)")
 hadoption = gets.chomp
 
 puts("Estimated age?")
-hage = gets.chomp 
+hage = gets.chomp  
+
+puts("Name: "+hname)
+puts("Vol: "+hvolume) 
+puts("Color: "+hcolor)
+puts("Good?: "+hadoption) 
 
 if hage ==""
   hage=nil
   puts("You didn't enter age!")
 else 
-puts("age:"+hage)
-end  
-
-puts("name: "+hname)
-puts("vol: "+hvolume) 
-puts("color: "+hcolor)
-puts("Good?: "+hadoption) 
+  puts("Age: "+hage)
+end 
