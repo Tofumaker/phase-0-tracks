@@ -5,8 +5,7 @@
 # => Otherwise
 # =>   Advance letter to next letter in alphabet
 
-# puts("enter password")
-# pass = gets.chomp
+
 
 def encrypt(password)
   e_pw = password
@@ -19,7 +18,8 @@ def encrypt(password)
     end
     i-=1
   end
-  puts(e_pw.to_s)
+  puts("encrypted: "+e_pw.to_s)
+  e_pw.to_s
 end     
 
 
@@ -36,7 +36,8 @@ def decrypt(encr)
     current_letter = a_key.index(encr[i].to_s)
     d_pw[i] = a_key[current_letter-1]
   end
-  puts(d_pw)
+  puts("decrypted: "+d_pw.to_s)
+  d_pw.to_s
 end
 
 # encrypt("abc")
@@ -44,4 +45,26 @@ end
 # decrypt("bcd")
 # decrypt("afe")
 
+#The output of the first method is a string, and these methods can be used in any string.
 decrypt(encrypt("swordfish"))
+
+#INTERFACE
+
+user_error = 1
+while user_error > 0
+  puts("Would you like to encrypt or decrypt (e/d)?")
+  choice = gets.chomp
+  if choice == "e"
+    puts("enter password")
+    pass = gets.chomp
+    encrypt(pass)
+    user_error = 0
+  elsif choice == "d"
+    puts("enter password")
+    pass = gets.chomp
+    decrypt(pass)
+    user_error = 0
+  else
+    puts("You didn't select one of the choices given!\n\n")
+  end  
+end        
