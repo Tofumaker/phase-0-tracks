@@ -1,0 +1,40 @@
+Elevator
+
+1) Walk into elevator until equidistant from all walls
+2) Rotate in clockwise direction until floor control panel is directly in front of view.
+3) Move forward until barely touching the console
+4) Ask Derek for floor to press
+5) Press button displaying floor corresponding to Derek's response
+6) Rotate clockwise until facing open door
+7) If someone else approaches elevator door
+  8) rotate clockwise until facing control panel
+  9) press door close button repeatedly until door closes
+10) After door closes, wait until it opens again. 
+11) Check the floor number along outside
+12) If it matches Derek's response, move forward until out of the elevator
+13) If it does not match, repeat from step 5
+
+
+Breakfast Sandwich
+
+0) Set one English muffin, 2 strips of bacon, 1 egg, and 1 slice of Kraft single on plate, and one frying pan on kitchen counter.
+1) Put frying pan on stove
+2) Lay 2 strips of bacon on frying pan
+3) Turn knob of corresponding stove-top to medium low
+4) wait 2 minutes
+5) Split English muffin along precut line and place both halves in toaster oven
+6) Set toaster to light toast for 6 minutes
+7) Flip strips of bacon to other side
+8) Wait 3 minutes
+9) Take cooked bacon and place it on plate
+10) Crack egg and place in frying pan
+11) wait 2 minutes
+12) Take out English Muffin and place in plate next to bacon
+13) Place Kraft single on lower half of English muffin
+14) Flip egg in frying pan
+15) Break each strip of bacon in half
+16) Lay 2 halves of bacon on top of Kraft single
+17) Wait 2 minutes
+18) Take egg out of frying pan and place on top of bacon halves on Kraft single
+19) Place 2 remaining halves of bacon on top of egg
+20) Place top half of English muffin on bacon
