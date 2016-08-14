@@ -6,18 +6,23 @@
 
 # "iNvEsTiGaTiOn".<???>
 # => “InVeStIgAtIoN”
+p "iNvEsTiGaTiOn".swapcase
 
 # "zom".<???>
 # => “zoom”
+p "zom".insert(1, "o")
 
 # "enhance".<???>
 # => "    enhance    "
+p "enhance".center(15)
 
 # "Stop! You’re under arrest!".<???>
 # => "STOP! YOU’RE UNDER ARREST!"
+p "Stop! You’re under arrest!".upcase
 
 # "the usual".<???>
 #=> "the usual suspects"
+p "the usual".insert(-1, " suspects")
 
 # " suspects".<???>
 # => "the usual suspects"
