@@ -1,3 +1,4 @@
+#Setting up the nested data structure
 movies = {
   favorite:{
     name: "Minority Report",
@@ -19,6 +20,19 @@ movies = {
   }
 }
 
-p movies
-p movies[:favorite][:cast][0]
+#Present the info in an intuitive manner
+movies.each do |rank, info|
+  puts("My "+rank.to_s+" is " + movies[rank][:name])
+  puts("Here's the rest of the info:")
+  p "Run Time: " + movies[rank][:run_time].to_s + " minutes"
+  p "Cast: " + movies[rank][:cast].to_s
+  p "Family Friendly: "+ movies[rank][:family_friendly].to_s
+  p " "
+end
 
+# p movies
+
+# p movies[:favorite]
+# p movies[:third_favorite][:family_friendly]
+
+puts ("The main actress in the movie #{movies[:second_favorite][:name]} is #{movies[:second_favorite][:cast][2]}.")
