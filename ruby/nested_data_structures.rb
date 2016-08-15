@@ -30,9 +30,9 @@ movies.each do |rank, info|
   p " "
 end
 
-# p movies
+puts ("The main actress in the movie #{movies[:second_favorite][:name]} is #{movies[:second_favorite][:cast][2]}.")
 
+# Some other basic calls, uncomment to check them out but pretty self-explanatory
+# p movies
 # p movies[:favorite]
 # p movies[:third_favorite][:family_friendly]
-
-puts ("The main actress in the movie #{movies[:second_favorite][:name]} is #{movies[:second_favorite][:cast][2]}.")
