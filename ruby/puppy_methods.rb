@@ -7,3 +7,6 @@ class Puppy
 
 end
 
+Tofu = Puppy.new
+
+Tofu.fetch("tennis ball")
