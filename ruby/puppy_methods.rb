@@ -30,7 +30,11 @@ class Puppy
     end
     return p jump_variable  
   end
-    
+
+  def initialize
+    puts ("Initializing new puppy instance ...")
+  end
+
 end
 
 Tofu = Puppy.new
