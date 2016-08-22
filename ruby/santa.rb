@@ -86,7 +86,7 @@ santas = []
 example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
 example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
 
-5.times do
+50.times do
   santas << Santa.new(example_genders.sample, example_ethnicities.sample)
 end
 
