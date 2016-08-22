@@ -1,21 +1,37 @@
 module Shout
 
-  def self.yell_angrily(words)
-    words + "!!!"+" :("
+  def yell_angrily(words)
+    
+    p words + "!!!"+" :("
+  
   end
 
-  def self.yelling_happily(words)
+  def yelling_happily(words)
     words = words.downcase
-    words + " :) :) :)"
+    p words + " :) :) :)"
   end
 
 end
 
-include Shout
+class Duck
+  include Shout
+end
 
-require 'Shout'
+class Lion
+  include Shout
+end    
 
 
-Shout.yell_angrily("WHAT DA FUCK")
+# require_relative 'Shout'
+# Shout.singleton_methods
 
-Shout.yell_angrily("WHAT DA FUCK")
+darkwing = Duck.new
+simba = Lion.new
+
+
+
+darkwing.yell_angrily("QUACK QUACK QUACK QUACK")
+darkwing.yelling_happily("QUACK QUACK")
+
+simba.yell_angrily("roarr")
+simba.yelling_happily("pURRrrr")
