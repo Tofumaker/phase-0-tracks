@@ -14,9 +14,11 @@
 //If both match, then set variable matching to true
 //Return the match variable at upon conclusion of function
 
-//
+//Pseudo Code for random string generator
+//create a function that randomly selects a character out of the alphabet
+//implement this random character selector a random number of times to generate a string of random length
+//Repeat this process the number of times denoted by the function's input
 
-//Pseudo Code for 
 
 //LONGEST STRING ALGORITHM
 function Longest(storage_array){
@@ -41,6 +43,7 @@ function Longest(storage_array){
   }  
 }//END OF LONGEST STRING ALGORITHM
 
+//MATCHING KEY-VALUE PAIR ALGORITHM
 function Matching(object_1, object_2){
   var matched_pair = false
   for (var key_1 in object_1) {
@@ -51,7 +54,27 @@ function Matching(object_1, object_2){
   }
   console.log("Matching Pair Detected: "+matched_pair)
   return matched_pair
-}
+}//END OF MATCHING KEY-VALUE PAIR ALGORITHM
+
+//RANDOM ARRAY GENERATOR
+function Array_Generate(array_length){
+  var generated_array = []
+  var alphabet = "abcdefghijklmnopqrstuvwxyz"
+  var i = 0
+  while (i < array_length){
+    var word_length = Math.floor((Math.random()*10)+1)
+    var generated_word = ""
+
+    for (var j = 0; j < word_length; j++){
+      var random_letter_index = Math.floor(Math.random()*26)
+      var random_letter = alphabet.charAt(random_letter_index)
+      generated_word += random_letter
+    }
+    generated_array[i] = generated_word
+    i +=1
+  }
+  console.log(generated_array)
+}//END OF RANDOM ARRAY GENERATOR
 
 
 //DRIVER CODE TO TEST FUNCTIONS
@@ -62,9 +85,9 @@ Matching( {make:"Ford",year:1990,american:true} , {make:"toyota",year:2000,ameri
 Matching( {make:"Ford",year:2000,american:true} , {make:"toyota",year:2000,american:false})
 Matching( {Make:"toyota",yearo:2000,americano:true} , {make:"toyota",year:2000,american:true})
 
-
-
-
+Array_Generate(1)
+Array_Generate(3)
+Array_Generate(5)
 
 
 
