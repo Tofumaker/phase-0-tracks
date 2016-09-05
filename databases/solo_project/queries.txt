@@ -1,0 +1,65 @@
+1)
+COMMAND: SELECT * FROM characters;
+OUTPUT:
+1|Ned|47|true|1
+2|Robb|20|false|1
+3|Catelyn|43|false|1
+4|Cersei|40|false|2
+5|Jaime|40|false|2
+6|Tywin|60|true|2
+7|Tyrion|33|false|2
+8|Robert|48|true|3
+9|Renley|44|true|3
+10|Stannis|46|true|3
+11|Dany|18|false|4
+12|Viserys|20|true|4
+13|Rhaegar|25|true|4
+
+2)
+COMMAND: UPDATE characters SET house_id = 4 WHERE name = "Tyrion";
+OUTPUT: N/A
+
+3)
+COMMAND: SELECT * FROM characters, houses WHERE characters.house_id = houses.id;
+OUTPUT:
+1|Ned|47|true|1|1|Stark
+2|Robb|20|false|1|1|Stark
+3|Catelyn|43|false|1|1|Stark
+4|Cersei|40|false|2|2|Lannister
+5|Jaime|40|false|2|2|Lannister
+6|Tywin|60|true|2|2|Lannister
+7|Tyrion|33|false|4|4|Targaryen
+8|Robert|48|true|3|3|Baratheon
+9|Renley|44|true|3|3|Baratheon
+10|Stannis|46|true|3|3|Baratheon
+11|Dany|18|false|4|4|Targaryen
+12|Viserys|20|true|4|4|Targaryen
+13|Rhaegar|25|true|4|4|Targaryen
+
+4)
+COMMAND: SELECT characters.name, houses.name FROM characters JOIN houses ON characters.house_id = houses.id;
+OUTPUT:
+Ned|Stark
+Robb|Stark
+Catelyn|Stark
+Cersei|Lannister
+Jaime|Lannister
+Tywin|Lannister
+Tyrion|Targaryen
+Robert|Baratheon
+Renley|Baratheon
+Stannis|Baratheon
+Dany|Targaryen
+Viserys|Targaryen
+Rhaegar|Targaryen
+
+5)
+COMMAND: DELETE FROM characters WHERE dead = "true";
+OUTPUT: after running the same command from 4)...
+Robb|Stark
+Catelyn|Stark
+Cersei|Lannister
+Jaime|Lannister
+Tyrion|Targaryen
+Dany|Targaryen
+
