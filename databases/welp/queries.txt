@@ -1,0 +1,50 @@
+1)
+Command: SELECT * FROM users, businesses, reviews;
+Output:
+1|Bradford|Pitt|1|Grundy Hollow Wedding Chapel|1|5|Had my best wedding there!|1|2
+1|Bradford|Pitt|1|Grundy Hollow Wedding Chapel|2|2|Amir was rude but got the job done|2|2
+1|Bradford|Pitt|1|Grundy Hollow Wedding Chapel|3|4|They make the best Jack & Cokes!|3|1
+1|Bradford|Pitt|2|Amir's Towing|1|5|Had my best wedding there!|1|2
+1|Bradford|Pitt|2|Amir's Towing|2|2|Amir was rude but got the job done|2|2
+1|Bradford|Pitt|2|Amir's Towing|3|4|They make the best Jack & Cokes!|3|1
+1|Bradford|Pitt|3|The Beagle Nightclub|1|5|Had my best wedding there!|1|2
+1|Bradford|Pitt|3|The Beagle Nightclub|2|2|Amir was rude but got the job done|2|2
+1|Bradford|Pitt|3|The Beagle Nightclub|3|4|They make the best Jack & Cokes!|3|1
+2|Mandy|Kaling|1|Grundy Hollow Wedding Chapel|1|5|Had my best wedding there!|1|2
+2|Mandy|Kaling|1|Grundy Hollow Wedding Chapel|2|2|Amir was rude but got the job done|2|2
+2|Mandy|Kaling|1|Grundy Hollow Wedding Chapel|3|4|They make the best Jack & Cokes!|3|1
+2|Mandy|Kaling|2|Amir's Towing|1|5|Had my best wedding there!|1|2
+2|Mandy|Kaling|2|Amir's Towing|2|2|Amir was rude but got the job done|2|2
+2|Mandy|Kaling|2|Amir's Towing|3|4|They make the best Jack & Cokes!|3|1
+2|Mandy|Kaling|3|The Beagle Nightclub|1|5|Had my best wedding there!|1|2
+2|Mandy|Kaling|3|The Beagle Nightclub|2|2|Amir was rude but got the job done|2|2
+2|Mandy|Kaling|3|The Beagle Nightclub|3|4|They make the best Jack & Cokes!|3|1
+3|Angela|Jolie|1|Grundy Hollow Wedding Chapel|1|5|Had my best wedding there!|1|2
+3|Angela|Jolie|1|Grundy Hollow Wedding Chapel|2|2|Amir was rude but got the job done|2|2
+3|Angela|Jolie|1|Grundy Hollow Wedding Chapel|3|4|They make the best Jack & Cokes!|3|1
+3|Angela|Jolie|2|Amir's Towing|1|5|Had my best wedding there!|1|2
+3|Angela|Jolie|2|Amir's Towing|2|2|Amir was rude but got the job done|2|2
+3|Angela|Jolie|2|Amir's Towing|3|4|They make the best Jack & Cokes!|3|1
+3|Angela|Jolie|3|The Beagle Nightclub|1|5|Had my best wedding there!|1|2
+3|Angela|Jolie|3|The Beagle Nightclub|2|2|Amir was rude but got the job done|2|2
+3|Angela|Jolie|3|The Beagle Nightclub|3|4|They make the best Jack & Cokes!|3|1
+
+2)
+Command: SELECT * FROM users, businesses, reviews WHERE users.first_name = "Mandy";
+Output:
+2|Mandy|Kaling|1|Grundy Hollow Wedding Chapel|1|5|Had my best wedding there!|1|2
+2|Mandy|Kaling|1|Grundy Hollow Wedding Chapel|2|2|Amir was rude but got the job done|2|2
+2|Mandy|Kaling|1|Grundy Hollow Wedding Chapel|3|4|They make the best Jack & Cokes!|3|1
+2|Mandy|Kaling|2|Amir's Towing|1|5|Had my best wedding there!|1|2
+2|Mandy|Kaling|2|Amir's Towing|2|2|Amir was rude but got the job done|2|2
+2|Mandy|Kaling|2|Amir's Towing|3|4|They make the best Jack & Cokes!|3|1
+2|Mandy|Kaling|3|The Beagle Nightclub|1|5|Had my best wedding there!|1|2
+2|Mandy|Kaling|3|The Beagle Nightclub|2|2|Amir was rude but got the job done|2|2
+2|Mandy|Kaling|3|The Beagle Nightclub|3|4|They make the best Jack & Cokes!|3|1
+
+3)
+Command: SELECT first_name, last_name, reviews.comment, reviews.stars, businesses.name FROM users, businesses JOIN reviews ON reviews.user_id=users.id AND reviews.business_id=businesses.id;
+Output:
+Mandy|Kaling|Had my best wedding there!|5|Grundy Hollow Wedding Chapel
+Mandy|Kaling|Amir was rude but got the job done|2|Amir's Towing
+Bradford|Pitt|They make the best Jack & Cokes!|4|The Beagle Nightclub
